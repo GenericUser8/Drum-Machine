@@ -73,10 +73,11 @@ interface MachineControlsProps {
   last: string
 }
 function MachineContols({ last }: MachineControlsProps) {
+  const lastInput = last !== ' ' ? SOUNDS[last].name : ""
   return(
     <div className="machine-controls">
       <p>This would be where I would put controls if I had more audio samples.</p>
-      <p id="display">{SOUNDS[last]["name"]}</p>
+      <p id="display">{lastInput}</p>
     </div>
   );
 }
